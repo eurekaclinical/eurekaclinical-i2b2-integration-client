@@ -19,7 +19,6 @@ package org.eurekaclinical.i2b2.integration.client.comm;
  * limitations under the License.
  * #L%
  */
-
 import java.util.ArrayList;
 import java.util.List;
 import org.eurekaclinical.common.comm.UserTemplate;
@@ -29,7 +28,10 @@ import org.eurekaclinical.common.comm.UserTemplate;
  * @author Andrew Post
  */
 public class I2b2IntegrationUserTemplate extends UserTemplate {
+
     private List<Long> groups = new ArrayList<>();
+    private boolean autoAuthorize;
+    private String criteria;
 
     public I2b2IntegrationUserTemplate() {
     }
@@ -42,10 +44,39 @@ public class I2b2IntegrationUserTemplate extends UserTemplate {
         this.groups = groups;
     }
 
+    public boolean isAutoAuthorize() {
+        return autoAuthorize;
+    }
+
+    public void setAutoAuthorize(boolean autoAuthorize) {
+        this.autoAuthorize = autoAuthorize;
+    }
+
+    /**
+     * Gets the criteria for triggering auto-authorization. May be
+     * <code>null</code>, which means that auto-authorization will always be
+     * triggered when requested. The criteria are expressed as an expression in
+     * Freemarker syntax.
+     */
+    public String getCriteria() {
+        return criteria;
+    }
+
+    /**
+     * Sets criteria for triggering auto-authorization. May be
+     * <code>null</code>, which means that auto-authorization will always be
+     * triggered when requested.
+     *
+     * @param criteria the criteria for triggering auto-authorization, expressed
+     * using Freemarker expression syntax.
+     */
+    public void setCriteria(String criteria) {
+        this.criteria = criteria;
+    }
+
     @Override
     public String toString() {
-        return "I2b2IntegrationUserTemplate{" + "groups=" + groups + super.toString() + '}';
+        return "I2b2IntegrationUserTemplate{" + "groups=" + groups + ", autoAuthorize=" + autoAuthorize + ", criteria=" + criteria + super.toString() + '}';
     }
-    
-    
+
 }
