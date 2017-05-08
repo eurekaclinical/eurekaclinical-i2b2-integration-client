@@ -1,4 +1,4 @@
-package org.eurekaclinical.i2b2.integration.client;
+package org.eurekaclinical.i2b2integration.client;
 
 /*-
  * #%L
@@ -25,11 +25,11 @@ import org.eurekaclinical.common.comm.clients.EurekaClinicalClient;
 /**
  * @author Andrew Post
  */
-public class EurekaClinicalI2b2IntegrationProxyClient extends EurekaClinicalClient {
+public class EurekaClinicalI2b2IntegrationClient extends EurekaClinicalClient {
 
     private final String serviceUrl;
 
-    public EurekaClinicalI2b2IntegrationProxyClient(String inServiceUrl) {
+    public EurekaClinicalI2b2IntegrationClient(String inServiceUrl) {
         super(null);
         this.serviceUrl = inServiceUrl;
     }

@@ -1,4 +1,4 @@
-package org.eurekaclinical.i2b2.integration.client.comm;
+package org.eurekaclinical.i2b2integration.client.comm;
 
 /*-
  * #%L

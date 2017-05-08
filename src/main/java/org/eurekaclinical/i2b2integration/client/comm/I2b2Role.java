@@ -1,8 +1,8 @@
-package org.eurekaclinical.i2b2.integration.client;
+package org.eurekaclinical.i2b2integration.client.comm;
 
 /*-
  * #%L
- * Eureka! Clinical I2b2 Integration Webapp
+ * Eureka Clinical i2b2 Integration Client
  * %%
  * Copyright (C) 2016 Emory University
  * %%
@@ -20,23 +20,33 @@ package org.eurekaclinical.i2b2.integration.client;
  * #L%
  */
 
-import org.eurekaclinical.common.comm.clients.EurekaClinicalClient;
-
 /**
+ *
  * @author Andrew Post
  */
-public class EurekaClinicalI2b2IntegrationClient extends EurekaClinicalClient {
+public class I2b2Role {
+    private Long id;
+    private String name;
 
-    private final String serviceUrl;
+    public Long getId() {
+        return id;
+    }
 
-    public EurekaClinicalI2b2IntegrationClient(String inServiceUrl) {
-        super(null);
-        this.serviceUrl = inServiceUrl;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
-    protected String getResourceUrl() {
-        return this.serviceUrl;
+    public String toString() {
+        return "I2b2Role{" + "id=" + id + ", name=" + name + '}';
     }
     
 }

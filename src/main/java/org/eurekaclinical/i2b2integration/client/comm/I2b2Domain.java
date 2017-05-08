@@ -1,4 +1,4 @@
-package org.eurekaclinical.i2b2.integration.client.comm;
+package org.eurekaclinical.i2b2integration.client.comm;
 
 /*-
  * #%L
@@ -24,9 +24,13 @@ package org.eurekaclinical.i2b2.integration.client.comm;
  *
  * @author Andrew Post
  */
-public class I2b2Role {
+public class I2b2Domain {
     private Long id;
     private String name;
+    private String proxyUrl;
+    private String redirectHost;
+    private String adminUsername;
+    private String adminPassword;
 
     public Long getId() {
         return id;
@@ -44,9 +48,36 @@ public class I2b2Role {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "I2b2Role{" + "id=" + id + ", name=" + name + '}';
+    public String getProxyUrl() {
+        return proxyUrl;
+    }
+
+    public void setProxyUrl(String proxyUrl) {
+        this.proxyUrl = proxyUrl;
+    }
+
+    public String getRedirectHost() {
+        return redirectHost;
+    }
+
+    public void setRedirectHost(String redirectHost) {
+        this.redirectHost = redirectHost;
+    }
+
+    public String getAdminUsername() {
+        return adminUsername;
+    }
+
+    public void setAdminUsername(String adminUsername) {
+        this.adminUsername = adminUsername;
+    }
+
+    public String getAdminPassword() {
+        return adminPassword;
+    }
+
+    public void setAdminPassword(String adminPassword) {
+        this.adminPassword = adminPassword;
     }
     
 }

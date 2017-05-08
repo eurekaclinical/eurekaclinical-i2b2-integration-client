@@ -1,4 +1,4 @@
-package org.eurekaclinical.i2b2.integration.client.comm;
+package org.eurekaclinical.i2b2integration.client.comm;
 
 /*-
  * #%L
@@ -21,47 +21,30 @@ package org.eurekaclinical.i2b2.integration.client.comm;
  */
 
 import java.util.List;
+import org.eurekaclinical.common.comm.Group;
 
 /**
  *
  * @author Andrew Post
  */
-public class I2b2Project {
-    private Long id;
-    private String name;
-    private List<Long> groups;
-    private Long i2b2Domain;
+public class I2b2IntegrationGroup extends Group {
+    private List<Long> i2b2Roles;
+    private List<Long> i2b2Projects;
 
-    public Long getId() {
-        return id;
+    public List<Long> getI2b2Roles() {
+        return i2b2Roles;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setI2b2Roles(List<Long> i2b2Roles) {
+        this.i2b2Roles = i2b2Roles;
     }
 
-    public String getName() {
-        return name;
+    public List<Long> getI2b2Projects() {
+        return i2b2Projects;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setI2b2Projects(List<Long> i2b2Projects) {
+        this.i2b2Projects = i2b2Projects;
     }
-
-    public List<Long> getGroups() {
-        return groups;
-    }
-
-    public void setGroups(List<Long> groups) {
-        this.groups = groups;
-    }
-
-    public Long getI2b2Domain() {
-        return i2b2Domain;
-    }
-
-    public void setI2b2Domain(Long i2b2Domain) {
-        this.i2b2Domain = i2b2Domain;
-    }
-
+    
 }
