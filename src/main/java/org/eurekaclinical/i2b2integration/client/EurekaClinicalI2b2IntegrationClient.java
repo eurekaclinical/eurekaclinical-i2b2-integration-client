@@ -20,22 +20,23 @@ package org.eurekaclinical.i2b2integration.client;
  * #L%
  */
 
-import org.eurekaclinical.common.comm.clients.EurekaClinicalClient;
+import java.net.URI;
+import org.eurekaclinical.common.comm.clients.AuthorizingEurekaClinicalClient;
 
 /**
  * @author Andrew Post
  */
-public class EurekaClinicalI2b2IntegrationClient extends EurekaClinicalClient {
+public class EurekaClinicalI2b2IntegrationClient extends AuthorizingEurekaClinicalClient {
 
-    private final String serviceUrl;
+    private final URI serviceUrl;
 
     public EurekaClinicalI2b2IntegrationClient(String inServiceUrl) {
         super(null);
-        this.serviceUrl = inServiceUrl;
+        this.serviceUrl = URI.create(inServiceUrl);
     }
 
     @Override
-    protected String getResourceUrl() {
+    protected URI getResourceUrl() {
         return this.serviceUrl;
     }
     
