@@ -4,7 +4,7 @@
     <groupId>org.eurekaclinical</groupId>
     <artifactId>eurekaclinical-i2b2-integration-client</artifactId>
     <name>Eureka Clinical i2b2 Integration Client</name>
-    <version>2.2-Alpha-1-SNAPSHOT</version>
+    <version>2.2-Alpha-1</version>
     <packaging>jar</packaging>
     <description>Client for accessing Eureka!'s i2b2 integration services.
     </description>
@@ -22,7 +22,7 @@
         <connection>scm:git:https://github.com/eurekaclinical/eurekaclinical-i2b2-integration-client.git</connection>
         <developerConnection>scm:git:https://github.com/eurekaclinical/eurekaclinical-i2b2-integration-client.git</developerConnection>
         <url>https://github.com/eurekaclinical/eurekaclinical-i2b2-integration-client.git</url>
-        <tag>HEAD</tag>
+        <tag>eurekaclinical-i2b2-integration-client-2.2-Alpha-1</tag>
     </scm>
 	
     <issueManagement>
