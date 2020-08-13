@@ -13,7 +13,7 @@
     <parent>
         <groupId>org.eurekaclinical</groupId>
         <artifactId>eurekaclinical-parent-standard-deps</artifactId>
-        <version>4-Alpha-4-SNAPSHOT</version>
+        <version>4-Alpha-4</version>
     </parent>
 
     <url>https://github.com/eurekaclinical/eurekaclinical-i2b2-integration-client.git</url>
@@ -31,8 +31,8 @@
     </issueManagement>
     
     <properties>
-        <eurekaclinical-common-version>5.1-Alpha-1-SNAPSHOT</eurekaclinical-common-version>
-        <maven.javadoc.skip>true</maven.javadoc.skip>
+        <eurekaclinical-common-version>5.1-Alpha-1</eurekaclinical-common-version>
+        <!-- maven.javadoc.skip>true</maven.javadoc.skip-->
     </properties>
 	
     <build>
